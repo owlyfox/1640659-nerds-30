@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>HTML Academy: Нёрдс</title>
+  <title>Каталог Нёрдс</title>
 </head>
 
 <body>
@@ -24,66 +24,69 @@
 
   <main>
     <h1>Магазин готовых шаблонов</h1>
-    <form method="GET" action="https://echo.htmlacademy.ru">
-      <fieldset>
-        <legend>Стоимость:</legend>
-        <input type="range" name="price" id="price" min="0" max="15000">
-        <p>
-          <label for="filter-min-price">От</label>
-          <input type="text" name="min-price" id="filter-min-price" placeholder="0">
-          <label for="filter-max-price">До</label>
-          <input type="text" name="max-price" id="filter-max-price" placeholder="15 000">
-        </p>
-      </fieldset>
+    <section>
+      <h3>Фильтр</h3>
+      <form method="GET" action="https://echo.htmlacademy.ru">
+        <fieldset>
+          <legend>Стоимость:</legend>
+          <input type="range" name="price" id="price" min="0" max="15000">
+          <p>
+            <label for="filter-min-price">От</label>
+            <input type="number" name="min-price" id="filter-min-price" value="0">
+            <label for="filter-max-price">До</label>
+            <input type="number" name="max-price" id="filter-max-price" max="15000" value="15000">
+          </p>
+        </fieldset>
 
-      <fieldset>
-        <legend>Сетка:</legend>
-        <ul>
-          <li>
-            <input type="radio" name="grid" id="filter-adaptive" value="adaptive" checked>
-            <label for="filter-adaptive">Адаптивная</label>
-          </li>
-          <li>
-            <input type="radio" name="grid" id="filter-fixed" value="fixed">
-            <label for="filter-fixed">Фиксированная</label>
-          </li>
-          <li>
-            <input type="radio" name="grid" id="filter-rubber" value="rubber">
-            <label for="filter-rubber">Резиновая</label>
-          </li>
-        </ul>
-      </fieldset>
+        <fieldset>
+          <legend>Сетка:</legend>
+          <ul>
+            <li>
+              <input type="radio" name="grid" id="filter-adaptive" value="adaptive" checked>
+              <label for="filter-adaptive">Адаптивная</label>
+            </li>
+            <li>
+              <input type="radio" name="grid" id="filter-fixed" value="fixed">
+              <label for="filter-fixed">Фиксированная</label>
+            </li>
+            <li>
+              <input type="radio" name="grid" id="filter-rubber" value="rubber">
+              <label for="filter-rubber">Резиновая</label>
+            </li>
+          </ul>
+        </fieldset>
 
-      <fieldset>
-        <legend>Особенности:</legend>
-        <ul>
-          <li>
-            <input type="checkbox" name="slider" id="filter-slider" checked>
-            <label for="filter-slider">Слайдер</label>
-          </li>
-          <li>
-            <input type="checkbox" name="benefits" id="filter-benefits">
-            <label for="filter-benefits">Блок преимуществ</label>
-          </li>
-          <li>
-            <input type="checkbox" name="news" id="filter-news" checked>
-            <label for="filter-news">Новости</label>
-          </li>
-          <li>
-            <input type="checkbox" name="gallery" id="filter-gallery">
-            <label for="filter-gallery">Галерея</label>
-          </li>
-          <li>
-            <input type="checkbox" name="cart" id="filter-cart">
-            <label for="filter-cart">Корзина</label>
-          </li>
-        </ul>
-      </fieldset>
-      <button type="submit">Показать</button>
-    </form>
+        <fieldset>
+          <legend>Особенности:</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="slider" id="filter-slider" checked>
+              <label for="filter-slider">Слайдер</label>
+            </li>
+            <li>
+              <input type="checkbox" name="benefits" id="filter-benefits">
+              <label for="filter-benefits">Блок преимуществ</label>
+            </li>
+            <li>
+              <input type="checkbox" name="news" id="filter-news" checked>
+              <label for="filter-news">Новости</label>
+            </li>
+            <li>
+              <input type="checkbox" name="gallery" id="filter-gallery">
+              <label for="filter-gallery">Галерея</label>
+            </li>
+            <li>
+              <input type="checkbox" name="cart" id="filter-cart">
+              <label for="filter-cart">Корзина</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button type="submit">Показать</button>
+      </form>
+    </section>
 
     <section>
-      <p>Сортировать:</p>
+      <h3>Сортировать:</h3>
       <ul>
         <li>
           <a href="#">По цене</a>
@@ -113,7 +116,7 @@
           <img src="https://via.placeholder.com/358x578" alt="Превью проекта Sedona">
           <div>
             <a href="#">Sedona</a>
-            <p>Информационный сайт<br>для туристов</p>
+            <p>Информационный сайт для туристов</p>
             <button type="button">9 900 &#8381</button>
           </div>
         </li>
@@ -121,7 +124,7 @@
           <img src="https://via.placeholder.com/358x578" alt="Превью проекта PinkApp">
           <div>
             <a href="#">Pink App</a>
-            <p>Продуктовый лендинг<br>приложения для iOS и Android</p>
+            <p>Продуктовый лендинг приложения для iOS и Android</p>
             <button type="button">9 900 &#8381</button>
           </div>
         </li>
@@ -129,7 +132,7 @@
           <img src="https://via.placeholder.com/358x578" alt="Превью проекта Barbershop">
           <div>
             <a href="#">Barbershop</a>
-            <p>Сайт салона красоты.<br>Для мужчин, да.</p>
+            <p>Сайт салона красоты. Для мужчин, да.</p>
             <button type="button">9 900 &#8381</button>
           </div>
         </li>
@@ -137,7 +140,7 @@
           <img src="https://via.placeholder.com/358x578" alt="Превью проекта MISHKA">
           <div>
             <a href="#">MISHKA</a>
-            <p>Интернет-магазин<br>двязаных игрушек</p>
+            <p>Интернет-магазин двязаных игрушек</p>
             <button type="button">9 900 &#8381</button>
           </div>
         </li>
@@ -145,7 +148,7 @@
           <img src="https://via.placeholder.com/358x578" alt="Превью проекта A Plus">
           <div>
             <a href="#">A Plus</a>
-            <p>Лендинг курсов повышения<br>квалификации</p>
+            <p>Лендинг курсов повышения квалификации</p>
             <button type="button">9 900 &#8381</button>
           </div>
         </li>
@@ -153,7 +156,7 @@
           <img src="https://via.placeholder.com/358x578" alt="Превью проекта КВАСТ">
           <div>
             <a href="#">КВАСТ</a>
-            <p>Промо-сайт производителя<br>крафтового кваса</p>
+            <p>Промо-сайт производителя крафтового кваса</p>
             <button type="button">9 900 &#8381</button>
           </div>
         </li>
