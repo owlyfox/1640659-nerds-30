@@ -30,15 +30,15 @@
     </nav>
   </header>
 
-  <main class="container">
-    <h1 class="main-title">Магазин готовых шаблонов</h1>
+  <main class="container-catalog">
+    <h1 class="main-title main-title--catalog ">Магазин готовых шаблонов</h1>
     <section class="filter">
       <h3 class="visually-hidden">Фильтр</h3>
       <form class="filter-form" method="GET" action="https://echo.htmlacademy.ru">
         <fieldset class="filter-form-item range-slider">
-          <legend class="filter-title">Стоимость:</legend>
+          <legend class="filter-title range-slider-title">Стоимость:</legend>
           <input class="range-slider-control" type="range" name="price" id="price" min="0" max="15000">
-          <p>
+          <p class="range-slider-inner">
             <label class="range-slider-text" for="filter-min-price">От</label>
             <input class="range-slider-text range-slider-input" type="number" name="min-price" id="filter-min-price"
               value="0">
@@ -49,7 +49,7 @@
         </fieldset>
 
         <fieldset class="filter-form-item grid">
-          <legend class="filter-title">Сетка:</legend>
+          <legend class="filter-title grid-title">Сетка:</legend>
           <ul class="grid-list">
             <li class="grid-list-item">
               <input class="grid-input" type="radio" name="grid" id="filter-adaptive" value="adaptive" checked>
@@ -67,7 +67,7 @@
         </fieldset>
 
         <fieldset class="filter-form-item benefits">
-          <legend class="filter-title">Особенности:</legend>
+          <legend class="filter-title benefits-title">Особенности:</legend>
           <ul class="benefits-list">
             <li class="benefits-list-item">
               <input class="benefits-input" type="checkbox" name="slider" id="filter-slider" checked>
@@ -97,7 +97,7 @@
 
     <section class="sort">
       <h3 class="visually-hidden">Сортировка</h3>
-      <p class="filter-title">Сортировать:</p>
+      <p class="filter-title sort-title">Сортировать:</p>
       <ul class="sort-list">
         <li class="sort-list-item">
           <a class="sort-list-item-link link" href="#">По цене</a>
@@ -128,7 +128,7 @@
           <div class="catalog-list-item-inner">
             <a class="catalog-list-item-inner-link link" href="#">Sedona</a>
             <p class="catalog-list-item-inner-text">Информационный сайт для туристов</p>
-            <button class="button-primary" type="button">9 900 &#8381</button>
+            <button class="button-primary catalog-button" type="button">9 900 &#8381</button>
           </div>
         </li>
         <li class="catalog-list-item">
@@ -136,7 +136,7 @@
           <div class="catalog-list-item-inner">
             <a class="catalog-list-item-inner-link link" href="#">Pink App</a>
             <p class="catalog-list-item-inner-text">Продуктовый лендинг приложения для iOS и Android</p>
-            <button class="button-primary" type="button">9 900 &#8381</button>
+            <button class="button-primary catalog-button" type="button">9 900 &#8381</button>
           </div>
         </li>
         <li class="catalog-list-item">
@@ -144,7 +144,7 @@
           <div class="catalog-list-item-inner">
             <a class="catalog-list-item-inner-link link" href="#">Barbershop</a>
             <p class="catalog-list-item-inner-text">Сайт салона красоты. Для мужчин, да.</p>
-            <button class="button-primary" type="button">9 900 &#8381</button>
+            <button class="button-primary catalog-button" type="button">9 900 &#8381</button>
           </div>
         </li>
         <li class="catalog-list-item">
@@ -152,7 +152,7 @@
           <div class="catalog-list-item-inner">
             <a class="catalog-list-item-inner-link link" href="#">MISHKA</a>
             <p class="catalog-list-item-inner-text">Интернет-магазин двязаных игрушек</p>
-            <button class="button-primary" type="button">9 900 &#8381</button>
+            <button class="button-primary catalog-button" type="button">9 900 &#8381</button>
           </div>
         </li>
         <li class="catalog-list-item">
@@ -160,7 +160,7 @@
           <div class="catalog-list-item-inner">
             <a class="catalog-list-item-inner-link link" href="#">A Plus</a>
             <p class="catalog-list-item-inner-text">Лендинг курсов повышения квалификации</p>
-            <button class="button-primary" type="button">9 900 &#8381</button>
+            <button class="button-primary catalog-button" type="button">9 900 &#8381</button>
           </div>
         </li>
         <li class="catalog-list-item">
@@ -168,7 +168,7 @@
           <div class="catalog-list-item-inner">
             <a class="catalog-list-item-inner-link link" href="#">КВАСТ</a>
             <p class="catalog-list-item-inner-text">Промо-сайт производителя крафтового кваса</p>
-            <button class="button-primary" type="button">9 900 &#8381</button>
+            <button class="button-primary catalog-button" type="button">9 900 &#8381</button>
           </div>
         </li>
       </ul>
@@ -177,7 +177,7 @@
     <section class="pagination">
       <ul class="pagination-list">
         <li class="pagination-list-item">
-          <a class="pagination-list-item-link link" href="#">1</a>
+          <a class="pagination-list-item-link pagination-list-item-link-current link" href="#">1</a>
         </li>
         <li class="pagination-list-item">
           <a class="pagination-list-item-link link" href="#">2</a>
@@ -197,7 +197,7 @@
     <!-- Тут будет карта !-->
     <div class="footer-map">
       <img src="./img/index/map.jpg" width="1440" height="416" alt="Карта">
-      <img src="./img/index/map-marker.png" width="231" height="190" alt="Местоположение студии">
+      <img src="./img/index/map-marker.png" class="" width="231" height="190" alt="Местоположение студии">
     </div>
 
     <section class="footer-contacts">
@@ -205,35 +205,39 @@
       <h2 class="footer-contacts-title">Nёrds Design Studio</h2>
       </p>
       <address class="footer-contacts-list">
-        <p class="footer-contacts-list-text">1191186, Санкт-Петербург,
+        <p class="footer-contacts-list-address link">1191186, Санкт-Петербург,
           ул. Б. Конюшенная, д. 19/8</p>
-        <a href="tel:+78122757575" class="footer-contacts-list-text link">тел. +7 (812) 275-75-75</a>
+        <a href="tel:+78122757575" class="footer-contacts-list-phone link">тел. +7 (812)
+          275-75-75</a>
       </address>
-      <button type="button" class="button-primary">Напишите нам</button>
+      <button type="button" class="footer-contacts-button button-primary">Напишите нам</button>
     </section>
 
-    <ul class="footer-social">
-      <li>
-        <a href="#" class="footer-social-logo link">
-          <img src="./img/icons/social/vk.svg" width="26" height="15" alt="Логотип Вконтакте">
-        </a>
-      </li>
-      <li>
-        <a href="#" class="footer-social-logo link">
-          <img src="./img/icons/social/fb.svg" width="12" height="22" alt="Логотип Facebook">
-        </a>
-      </li>
-      <li>
-        <a href="#" class="footer-social-logo link">
-          <img src="./img/icons/social/insta.svg" width="21" height="21" alt="Логотип Instagram">
-        </a>
-      </li>
-    </ul>
+    <section class="footer-bonus">
+      <ul class="footer-bonus-social">
+        <li>
+          <a href="#" class="footer-bonus-social-logo link">
+            <img src="./img/icons/social/vk.svg" width="26" height="15" alt="Логотип Вконтакте">
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer-bonus-social-logo link">
+            <img src="./img/icons/social/fb.svg" width="12" height="22" alt="Логотип Facebook">
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer-bonus-social-logo link">
+            <img src="./img/icons/social/insta.svg" width="21" height="21" alt="Логотип Instagram">
+          </a>
+        </li>
+      </ul>
 
-    <div class="footer-promo">
-      <p class="footer-promo-slogan">Давайте дружить, это выгодно!</p>
-      <p class="footer-promo-text">Скидка 10% для друзей из социальных сетей.</p>
-    </div>
+      <div class="footer-bonus-promo">
+        <p class="footer-bonus-promo-slogan">Давайте дружить, это выгодно!</p>
+        <p class="footer-bonus-promo-text">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </section>
+
   </footer>
 
 </body>
