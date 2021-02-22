@@ -177,6 +177,7 @@ img {
   width: 100%;
 
   background-color: var(--secondary-bg-color);
+  padding-top: 48px;
 }
 
 .header-navigation-logo {
@@ -185,13 +186,16 @@ img {
 
 .header-navigation {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 45px;
+  grid-template-columns: auto 38% auto;
 }
 
 .header-navigation-list {
   list-style: none;
-  padding: 0 6px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 0 9px;
 }
 
 .header-navigation-list-link {
@@ -204,6 +208,10 @@ img {
   text-transform: uppercase;
 
   color: var(--primary-color-text);
+}
+
+.cart {
+  margin: auto 0 9px auto;
 }
 
 /* Main */
@@ -621,6 +629,10 @@ img {
   padding: 17px 44px 15px;
 }
 
+.footer-bonus-promo {
+  margin-right: auto;
+}
+
 .footer-bonus-promo-slogan {
   font-family: var(--font-family);
   font-style: normal;
@@ -645,17 +657,21 @@ img {
 
 .footer-bonus {
   display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 139px;
+  grid-template-columns: 35% 1fr;
 
   justify-items: center;
+  margin-bottom: 68px;
 }
 
 .footer-bonus-social {
   list-style: none;
   padding: 0;
-  margin: 0 0 68px;
+
   display: flex;
+  width: 100%;
+  max-width: 260px;
+  justify-content: space-between;
+  margin: 0 auto 0 0;
 }
 
 .footer-bonus-social-logo {
@@ -718,16 +734,60 @@ img {
   grid-area: sort;
 
   margin-bottom: 48px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .sort-title {
   margin: 0;
 }
 
+.sort-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 48%;
+}
+
 .sort-list {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 72%;
+}
+
+.sort-list-item-link:hover {
+  opacity: 0.6;
+}
+
+.sort-list-item-link:active {
+  opacity: 1;
+}
+
+.sort-list-controls-item-link {
+  color: var(--);
+}
+
+.sort-list-controls {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  width: 10%;
+}
+
+.link-up {
+  transform: rotate(180deg);
+  display: block;
 }
 
 .catalog {
@@ -876,6 +936,9 @@ img {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Catalog items*/
@@ -945,6 +1008,8 @@ img {
   padding: 0;
   margin: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pagination-list-item {
