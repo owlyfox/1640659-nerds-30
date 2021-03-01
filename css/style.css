@@ -186,16 +186,20 @@ img {
 
 .header-navigation {
   display: grid;
-  grid-template-columns: auto 38% auto;
+  grid-template-columns: 160px auto min-content;
 }
 
 .header-navigation-list {
   list-style: none;
-  padding: 0;
+  padding: 0 0 9px 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto 0 9px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 0 auto 0 22%;
+}
+
+.header-navigation-list-item {
+  margin-right: 45px;
 }
 
 .header-navigation-list-link {
@@ -210,8 +214,14 @@ img {
   color: var(--primary-color-text);
 }
 
+.header-navigation-list-item:last-child {
+  margin-right: 0;
+}
+
 .cart {
-  margin: auto 0 9px auto;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 9px 0;
 }
 
 /* Main */
@@ -670,8 +680,16 @@ img {
   display: flex;
   width: 100%;
   max-width: 260px;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0 auto 0 0;
+}
+
+.footer-bonus-social-item {
+  margin-right: 9px;
+}
+
+.footer-bonus-social-item:last-child {
+  margin-right: 0;
 }
 
 .footer-bonus-social-logo {
@@ -736,31 +754,38 @@ img {
   margin-bottom: 48px;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
 }
 
 .sort-title {
-  margin: 0;
+  margin: 0 266px 0 0;
 }
 
 .sort-inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 48%;
 }
 
 .sort-list {
   list-style: none;
-  margin: 0;
+  margin: 0 auto 0 0;
   padding: 0;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  width: 72%;
+}
+
+.sort-list-item {
+  margin-right: 25px;
+}
+
+.sort-list-item:last-child {
+  margin-right: 0;
 }
 
 .sort-list-item-link:hover {
@@ -769,20 +794,6 @@ img {
 
 .sort-list-item-link:active {
   opacity: 1;
-}
-
-.sort-list-controls-item-link {
-  color: var(--);
-}
-
-.sort-list-controls {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 0 auto;
-
-  display: flex;
-  justify-content: space-between;
-  width: 10%;
 }
 
 .link-up {
@@ -938,7 +949,15 @@ img {
   margin: 0;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+
+.sort-list-controls-item {
+  margin-right: 18px;
+}
+
+.sort-list-controls-item:last-child {
+  margin-right: 0;
 }
 
 /* Catalog items*/
