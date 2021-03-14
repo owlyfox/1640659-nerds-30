@@ -21,12 +21,12 @@
         <img src="./img/logos/nerds.svg" width="160" height="65" alt="Логотип Нёрдс">
       </a>
       <ul class="header-navigation-list">
-        <li class="header-navigation-list-item"><a href="#" class="header-navigation-list-link link">Студия</a></li>
+        <li class="header-navigation-list-item"><a href="#" class="header-navigation-list-link  link">Студия</a></li>
         <li class="header-navigation-list-item"><a href="#" class="header-navigation-list-link link">Клиенты</a></li>
-        <li class="header-navigation-list-item"><a href="#" class="header-navigation-list-link link">Магазин</a></li>
+        <li class="header-navigation-list-item"><a href="#" class="header-navigation-list-link header-navigation-list-link-active link">Магазин</a></li>
         <li class="header-navigation-list-item"><a href="#" class="header-navigation-list-link link">Контакты</a></li>
+        <li class="header-navigation-list-item"><a href="#" class="header-navigation-list-link link cart">Корзина</a></li>
       </ul>
-      <a href="#" class="header-navigation-list-link link cart">Корзина</a>
     </nav>
   </header>
 
@@ -36,37 +36,46 @@
       <section class="filter">
         <h3 class="visually-hidden">Фильтр</h3>
         <form class="filter-form" method="GET" action="https://echo.htmlacademy.ru">
+
+
           <fieldset class="filter-form-item range-slider">
             <legend class="filter-title range-slider-title">Стоимость:</legend>
-            <input class="range-slider-control" type="range" name="price" id="price" min="0" max="15000">
-            <div class="range-slider-inner">
-              <div class="range-slider-inner-item">
-                <label class="range-slider-text" for="filter-min-price">От</label>
-                <input class="range-slider-text range-slider-input" type="number" name="min-price" id="filter-min-price"
-                  value="0">
+            <div class="filter-range-slider">
+              <div class="filter-range-slider-controls">
+                <div class="controls-scale">
+                  <div class="controls-bar"></div>
+                </div>
+                <button class="toggle toggle-min" aria-label="Установить минимальную цену"></button>
+                <button class="toggle toggle-max" aria-label="Установить максимальную цену"></button>
               </div>
-              <div class="range-slider-inner-item">
-                <label class="range-slider-text" for="filter-max-price">До</label>
-                <input class="range-slider-text range-slider-input" type="number" name="max-price" id="filter-max-price"
-                  max="15000" value="15000">
+              <div class="range-slider-inner">
+                <div class="range-slider-inner-item">
+                  <label class="range-slider-text" for="filter-min-price">От</label>
+                  <input class="range-slider-text range-slider-input" type="number" name="min-price" id="filter-min-price" min="0" value="0">
+                </div>
+                <div class="range-slider-price-control">
+                  <label class="range-slider-text" for="filter-max-price">До</label>
+                  <input class="range-slider-text range-slider-input" type="number" name="max-price" id="filter-max-price" max="15000" value="15000">
+                </div>
               </div>
             </div>
           </fieldset>
+
 
           <fieldset class="filter-form-item grid">
             <legend class="filter-title grid-title">Сетка:</legend>
             <ul class="grid-list">
               <li class="grid-list-item">
-                <input class="grid-input" type="radio" name="grid" id="filter-adaptive" value="adaptive" checked>
-                <label class="filter-text" for="filter-adaptive">Адаптивная</label>
+                <input class="visually-hidden grid-input-radio" type="radio" name="grid" id="filter-adaptive" value="adaptive" checked>
+                <label class="filter-grid-description filter-text" for="filter-adaptive">Адаптивная</label>
               </li>
               <li class="grid-list-item">
-                <input class="grid-input" type="radio" name="grid" id="filter-fixed" value="fixed">
-                <label class="filter-text" for="filter-fixed">Фиксированная</label>
+                <input class="visually-hidden grid-input-radio" type="radio" name="grid" id="filter-fixed" value="fixed">
+                <label class="filter-grid-description filter-text" for="filter-fixed">Фиксированная</label>
               </li>
               <li class="grid-list-item">
-                <input class="grid-input" type="radio" name="grid" id="filter-rubber" value="rubber">
-                <label class="filter-text" for="filter-rubber">Резиновая</label>
+                <input class="visually-hidden grid-input-radio" type="radio" name="grid" id="filter-rubber" value="rubber">
+                <label class="filter-grid-description filter-text" for="filter-rubber">Резиновая</label>
               </li>
             </ul>
           </fieldset>
@@ -75,24 +84,24 @@
             <legend class="filter-title benefits-title">Особенности:</legend>
             <ul class="benefits-list">
               <li class="benefits-list-item">
-                <input class="benefits-input" type="checkbox" name="slider" id="filter-slider" checked>
-                <label class="filter-text" for="filter-slider">Слайдер</label>
+                <input class="visually-hidden benefits-input-checkbox" type="checkbox" name="slider" id="filter-slider" checked>
+                <label class="filter-benefits-description filter-text" for="filter-slider">Слайдер</label>
               </li>
               <li class="benefits-list-item">
-                <input class="benefits-input" type="checkbox" name="benefits" id="filter-benefits">
-                <label class="filter-text" for="filter-benefits">Блок преимуществ</label>
+                <input class="visually-hidden benefits-input-checkbox" type="checkbox" name="benefits" id="filter-benefits">
+                <label class="filter-benefits-description filter-text" for="filter-benefits">Блок преимуществ</label>
               </li>
               <li class="benefits-list-item">
-                <input class="benefits-input" type="checkbox" name="news" id="filter-news" checked>
-                <label class="filter-text" for="filter-news">Новости</label>
+                <input class="visually-hidden benefits-input-checkbox" type="checkbox" name="news" id="filter-news" checked>
+                <label class="filter-benefits-description filter-text" for="filter-news">Новости</label>
               </li>
               <li class="benefits-list-item">
-                <input class="benefits-input" type="checkbox" name="gallery" id="filter-gallery">
-                <label class="filter-text" for="filter-gallery">Галерея</label>
+                <input class="visually-hidden benefits-input-checkbox" type="checkbox" name="gallery" id="filter-gallery">
+                <label class="filter-benefits-description filter-text" for="filter-gallery">Галерея</label>
               </li>
               <li class="benefits-list-item">
-                <input class="benefits-input" type="checkbox" name="cart" id="filter-cart">
-                <label class="filter-text" for="filter-cart">Корзина</label>
+                <input class="visually-hidden benefits-input-checkbox" type="checkbox" name="cart" id="filter-cart">
+                <label class="filter-benefits-description filter-text" for="filter-cart">Корзина</label>
               </li>
             </ul>
           </fieldset>
@@ -142,7 +151,7 @@
         <h2 class="visually-hidden">Каталог шаблонов</h2>
         <ul class="catalog-list">
           <li class="catalog-list-item">
-            <img src="./img/catalog/preview-sedona.jpg" width="358" height="578" alt="Превью проекта Sedona">
+            <img src="./img/catalog/preview-sedona.jpg" class="catalog-list-item-img" width="358" height="578" alt="Превью проекта Sedona">
             <div class="catalog-list-item-inner">
               <a class="catalog-list-item-inner-link link" href="#">Sedona</a>
               <p class="catalog-list-item-inner-text">Информационный сайт для туристов</p>
@@ -150,7 +159,7 @@
             </div>
           </li>
           <li class="catalog-list-item">
-            <img src="./img/catalog/preview-pink.jpg" width="358" height="578" alt="Превью проекта PinkApp">
+            <img src="./img/catalog/preview-pink.jpg" class="catalog-list-item-img" width="358" height="578" alt="Превью проекта PinkApp">
             <div class="catalog-list-item-inner">
               <a class="catalog-list-item-inner-link link" href="#">Pink App</a>
               <p class="catalog-list-item-inner-text">Продуктовый лендинг приложения для iOS и Android</p>
@@ -158,7 +167,7 @@
             </div>
           </li>
           <li class="catalog-list-item">
-            <img src="./img/catalog/preview-barbershop.jpg" width="358" height="578" alt="Превью проекта Barbershop">
+            <img src="./img/catalog/preview-barbershop.jpg" class="catalog-list-item-img" width="358" height="578" alt="Превью проекта Barbershop">
             <div class="catalog-list-item-inner">
               <a class="catalog-list-item-inner-link link" href="#">Barbershop</a>
               <p class="catalog-list-item-inner-text">Сайт салона красоты. Для мужчин, да.</p>
@@ -166,7 +175,7 @@
             </div>
           </li>
           <li class="catalog-list-item">
-            <img src="./img/catalog/preview-mishka.jpg" width="358" height="578" alt="Превью проекта MISHKA">
+            <img src="./img/catalog/preview-mishka.jpg" class="catalog-list-item-img" width="358" height="578" alt="Превью проекта MISHKA">
             <div class="catalog-list-item-inner">
               <a class="catalog-list-item-inner-link link" href="#">MISHKA</a>
               <p class="catalog-list-item-inner-text">Интернет-магазин двязаных игрушек</p>
@@ -174,7 +183,7 @@
             </div>
           </li>
           <li class="catalog-list-item">
-            <img src="./img/catalog/preview-aplus.jpg" width="358" height="578" alt="Превью проекта A Plus">
+            <img src="./img/catalog/preview-aplus.jpg" class="catalog-list-item-img" width="358" height="578" alt="Превью проекта A Plus">
             <div class="catalog-list-item-inner">
               <a class="catalog-list-item-inner-link link" href="#">A Plus</a>
               <p class="catalog-list-item-inner-text">Лендинг курсов повышения квалификации</p>
@@ -182,7 +191,7 @@
             </div>
           </li>
           <li class="catalog-list-item">
-            <img src="./img/catalog/preview-kvast.jpg" width="358" height="578" alt="Превью проекта КВАСТ">
+            <img src="./img/catalog/preview-kvast.jpg" class="catalog-list-item-img" width="358" height="578" alt="Превью проекта КВАСТ">
             <div class="catalog-list-item-inner">
               <a class="catalog-list-item-inner-link link" href="#">КВАСТ</a>
               <p class="catalog-list-item-inner-text">Промо-сайт производителя крафтового кваса</p>
@@ -214,21 +223,19 @@
 
   <footer class="footer">
     <!-- Тут будет карта !-->
-    <div class="footer-map">
+    <section class="footer-map">
       <img src="./img/index/map.jpg" width="1440" height="416" alt="Карта">
-      <img src="./img/index/map-marker.png" class="" width="231" height="190" alt="Местоположение студии">
-    </div>
-
-    <section class="footer-contacts">
-      <h2 class="footer-contacts-title">Nёrds Design Studio</h2>
-
-      <address class="footer-contacts-list">
-        <p class="footer-contacts-list-address link">1191186, Санкт-Петербург,
-          ул. Б. Конюшенная, д. 19/8</p>
-        <a href="tel:+78122757575" class="footer-contacts-list-phone link">тел. +7 (812)
-          275-75-75</a>
-      </address>
-      <button type="button" class="footer-contacts-button button-primary">Напишите нам</button>
+      <div class="footer-contacts">
+        <h2 class="footer-contacts-title">Nёrds Design Studio</h2>
+        <address class="footer-contacts-list">
+          <p class="footer-contacts-list-address link">1191186, Санкт-Петербург,
+            ул. Б. Конюшенная, д. 19/8</p>
+          <a href="tel:+78122757575" class="footer-contacts-list-phone link">тел. +7 (812)
+            275-75-75</a>
+        </address>
+        <button type="button" class="footer-contacts-button button-primary">Напишите нам</button>
+      </div>
+      <img class="footer-map-marker" src="./img/index/map-marker.png" class="" width="231" height="190" alt="Местоположение студии">
     </section>
 
     <section class="footer-bonus container">

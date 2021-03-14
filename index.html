@@ -23,11 +23,10 @@
       <ul class="header-navigation-list">
         <li class="header-navigation-list-item"><a href="#" class="header-navigation-list-link link">Студия</a></li>
         <li class="header-navigation-list-item"><a href="#" class="header-navigation-list-link link">Клиенты</a></li>
-        <li class="header-navigation-list-item"><a href="./catalog.html"
-            class="header-navigation-list-link link">Магазин</a></li>
+        <li class="header-navigation-list-item"><a href="./catalog.html" class="header-navigation-list-link link">Магазин</a></li>
         <li class="header-navigation-list-item"><a href="#" class="header-navigation-list-link link">Контакты</a></li>
+        <li class="header-navigation-list-item"><a href="#" class="header-navigation-list-link link cart">Корзина</a></li>
       </ul>
-      <a href="#" class="header-navigation-list-link link cart">Корзина</a>
     </nav>
   </header>
 
@@ -37,33 +36,29 @@
     <section class="slider">
       <ul class="slider-list container">
         <li class="slider-list-banner">
-          <p class="slider-list-title">Долго, дорого, скрупулезно.</p>
-          <p class="slider-list-text text">Математически выверенный дизайн для вашего сайта или мобильного приложения.
-          </p>
+          <p class="slider-list-title">Долго, дорого,&NewLine;скрупулезно.</p>
+          <p class="slider-list-text text">Математически выверенный дизайн&NewLine;для вашего сайта или мобильного приложения.</p>
           <a href="#" class="slider-button button-primary link">Узнать больше</a>
         </li>
         <li class="slider-list-banner">
-          <p class="slider-list-title">Любим математику как никто другой</p>
-          <p class="slider-list-text text">Никакого креатива, только математические формулы для расчета идеальных
-            пропорций
-          </p>
+          <p class="slider-list-title">Любим математику&NewLine;как никто другой</p>
+          <p class="slider-list-text text">Никакого креатива, только математические формулы&NewLine;для расчета идеальных пропорций</p>
           <a href="#" class="slider-button button-primary link">Узнать больше</a>
         </li>
         <li class="slider-list-banner">
-          <p class="slider-list-title">Только ночь,только хардкор</p>
-          <p class="slider-list-text text">Работать днем, как все? Мы против этого. Ближе к полуночи работа только
-            начинается.</p>
+          <p class="slider-list-title">Только ночь,&NewLine;только хардкор</p>
+          <p class="slider-list-text text">Работать днем, как все? Мы против этого.&NewLine;Ближе к полуночи работа только начинается.</p>
           <a href="#" class="slider-button button-primary link">Узнать больше</a>
         </li>
       </ul>
       <ul class="slider-list-control">
         <li class="slider-list-control-item">
+          <button type="button" class="slider-list-control-button slider-list-control-button-active"></button>
+        </li>
+        <li class="slider-list-control-item">
           <button type="button" class="slider-list-control-button"></button>
         </li>
-        <li>
-          <button type="button" class="slider-list-control-button"></button>
-        </li>
-        <li>
+        <li class="slider-list-control-item">
           <button type="button" class="slider-list-control-button"></button>
         </li>
       </ul>
@@ -94,7 +89,7 @@
     </section>
 
     <section class="about container">
-      <div>
+      <div class="about-item">
         <h2 class="visually-hidden">О нас</h2>
         <p class="about-title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
         <p class="about-text text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше
@@ -116,7 +111,7 @@
       </div>
 
 
-      <div>
+      <div class="about-item">
         <p class="about-benefits-subtitle about-subtitle">с 2004 года любим точность во всем:</p>
         <ul class="about-benefits-list">
           <li class="about-benefits-item">
@@ -164,22 +159,19 @@
 
   <footer class="footer">
     <!-- Тут будет карта !-->
-    <div class="footer-map">
+    <section class="footer-map">
       <img src="./img/index/map.jpg" width="1440" height="416" alt="Карта">
-      <img src="./img/index/map-marker.png" class="" width="231" height="190" alt="Местоположение студии">
-    </div>
-
-    <section class="footer-contacts">
-      <p>
-      <h2 class="footer-contacts-title">Nёrds Design Studio</h2>
-      </p>
-      <address class="footer-contacts-list">
-        <p class="footer-contacts-list-address link">1191186, Санкт-Петербург,
-          ул. Б. Конюшенная, д. 19/8</p>
-        <a href="tel:+78122757575" class="footer-contacts-list-phone link">тел. +7 (812)
-          275-75-75</a>
-      </address>
-      <button type="button" class="footer-contacts-button button-primary">Напишите нам</button>
+      <div class="footer-contacts">
+        <h2 class="footer-contacts-title">Nёrds Design Studio</h2>
+        <address class="footer-contacts-list">
+          <p class="footer-contacts-list-address link">1191186, Санкт-Петербург,
+            ул. Б. Конюшенная, д. 19/8</p>
+          <a href="tel:+78122757575" class="footer-contacts-list-phone link">тел. +7 (812)
+            275-75-75</a>
+        </address>
+        <button type="button" class="footer-contacts-button button-primary">Напишите нам</button>
+      </div>
+      <img class="footer-map-marker" src="./img/index/map-marker.png" class="" width="231" height="190" alt="Местоположение студии">
     </section>
 
     <section class="footer-bonus container">
