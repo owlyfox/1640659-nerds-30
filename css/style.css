@@ -240,14 +240,12 @@ img {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -12px;
+  bottom: -9px;
 
   width: 100%;
   height: 2px;
 
   background-color: var(--nerds-primary-button-color);
-
-  z-index: 1;
 }
 
 .cart {
@@ -259,6 +257,8 @@ img {
 
 .cart::before {
   background-image: url("../img/icons/action/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
   content: "";
   position: absolute;
   height: 15px;
@@ -289,18 +289,15 @@ img {
 
   background-repeat: no-repeat;
   background-position: 100%;
+  background-size: auto;
+
+  position: relative;
 }
 
-.slider-list-banner:first-child {
-  background-image: url("../img/index/slider-1-phones.png");
-}
-
-.slider-list-banner:nth-child(2) {
-  background-image: url("../img/index/slider-2-laptop.png");
-}
-
-.slider-list-banner:last-child {
-  background-image: url("../img/index/slider-3-gadgets.png");
+.slider-img {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .slider-list-title {
@@ -333,13 +330,16 @@ img {
 
 .slider-list-control {
   position: absolute;
-  left: calc(50% - 44px);
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 96px;
 
   margin: 0;
 
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
 }
 
@@ -408,26 +408,17 @@ img {
   text-align: left;
   background-repeat: no-repeat;
   background-position: 0 0;
+  background-size: auto;
 }
 
-/* .feauters-list-item:first-child::before {
-  background-image: url(../img/index/illustration-notebook.jpg);
-  position: relative;
-  width: 300px;
-  height: 146px;
-  top: 0px;
-  left: 0px;
-  content: "";
-} */
-
-.feauters-list-item:nth-child(1) {
+.feauters-list-item-web {
   background-image: url(../img/index/illustration-notebook.jpg);
 }
-.feauters-list-item:nth-child(2) {
+.feauters-list-item-app {
   background-image: url(../img/index/illustration-phones.jpg);
 }
 
-.feauters-list-item:nth-child(3) {
+.feauters-list-item-presentation {
   background-image: url(../img/index/illustration-presentation.jpg);
 }
 
@@ -443,7 +434,6 @@ img {
 }
 
 .feauters-list-item-text {
-  padding-right: 40px;
   margin: 0 0 32px;
 }
 
@@ -781,23 +771,35 @@ img {
 
 /* Footer */
 
-.footer-map {
-  position: relative;
-
-  margin-bottom: 68px;
-  width: max-content;
+.footer {
+  width: 100%;
 }
 
-.footer-map-marker {
-  position: absolute;
-  display: block;
-  right: 0;
-  top: 0;
+.footer-map {
+  position: relative;
+  margin: 0 auto;
+
+  margin-bottom: 68px;
+  width: 100%;
+  min-height: 416px;
+
+  background-image: url(../img/index/map.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer-map-inner {
+  position: relative;
+
+  width: var(--container-width);
+  min-height: 416px;
+
+  margin: 0 auto;
 }
 
 .footer-contacts {
   position: absolute;
-  left: 140px;
+  left: 0;
   top: calc(50% - 154px);
 
   max-width: 320px;
@@ -1038,12 +1040,14 @@ img {
   height: 25px;
   background-image: url("../img/icons/action/radio-off.svg");
   background-repeat: no-repeat;
+  background-size: auto;
   opacity: 0.4;
 }
 
 .grid-input-radio:checked + .filter-grid-description::before {
   content: "";
   background-image: url("../img/icons/action/radio-on.svg");
+  background-size: auto;
   opacity: 0.4;
 }
 
@@ -1070,6 +1074,7 @@ img {
   width: 23px;
   background-image: url("../img/icons/action/checkbox-off.svg");
   background-repeat: no-repeat;
+  background-size: auto;
   opacity: 0.4;
 }
 
@@ -1077,6 +1082,7 @@ img {
   content: "";
   background-image: url("../img/icons/action/checkbox-on.svg");
   background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .benefits-input-checkbox:hover + .filter-benefits-description::before {
@@ -1343,6 +1349,7 @@ img {
   height: 40px;
   background-image: url(../img/icons/browser.svg);
   background-repeat: no-repeat;
+  background-size: auto;
   opacity: 0.12;
 }
 
