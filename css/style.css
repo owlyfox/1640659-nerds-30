@@ -258,7 +258,7 @@ img {
 .cart::before {
   background-image: url("../img/icons/action/icon-cart.svg");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: contain;
   content: "";
   position: absolute;
   height: 15px;
@@ -286,10 +286,6 @@ img {
 .slider-list-banner {
   padding-top: 78px;
   padding-bottom: 80px;
-
-  background-repeat: no-repeat;
-  background-position: 100%;
-  background-size: auto;
 
   position: relative;
 }
@@ -400,6 +396,8 @@ img {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 100px;
   text-align: center;
+
+  padding-right: 80px;
 }
 
 .feauters-list-item {
@@ -408,7 +406,7 @@ img {
   text-align: left;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-size: auto;
+  background-size: contain;
 }
 
 .feauters-list-item-web {
@@ -581,6 +579,7 @@ img {
 
 .about-item:nth-child(2) {
   background: url(../img/index/illustration-nerds.jpg) no-repeat 0 0;
+  background-size: contain;
 }
 
 .about-title {
@@ -1040,14 +1039,14 @@ img {
   height: 25px;
   background-image: url("../img/icons/action/radio-off.svg");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: contain;
   opacity: 0.4;
 }
 
 .grid-input-radio:checked + .filter-grid-description::before {
   content: "";
   background-image: url("../img/icons/action/radio-on.svg");
-  background-size: auto;
+  background-size: contain;
   opacity: 0.4;
 }
 
@@ -1074,7 +1073,7 @@ img {
   width: 23px;
   background-image: url("../img/icons/action/checkbox-off.svg");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: contain;
   opacity: 0.4;
 }
 
@@ -1082,7 +1081,7 @@ img {
   content: "";
   background-image: url("../img/icons/action/checkbox-on.svg");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: contain;
 }
 
 .benefits-input-checkbox:hover + .filter-benefits-description::before {
@@ -1349,7 +1348,7 @@ img {
   height: 40px;
   background-image: url(../img/icons/browser.svg);
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: contain;
   opacity: 0.12;
 }
 
